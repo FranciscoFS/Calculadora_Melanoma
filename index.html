@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Probabilidad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora de Probabilidad</h1>
+    <form id="calc-form">
+        <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" required>
+        </div>
+        <div class="form-group">
+            <label for="localizacion">Localización</label>
+            <select id="localizacion" name="localizacion">
+                <option value="cabeza_cuello">Cabeza y Cuello</option>
+                <option value="tronco">Tronco</option>
+                <option value="eess">EESS</option>
+                <option value="eeii">EEII</option>
+                <option value="genitales">Genitales</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="subtipo">Subtipo histológico</label>
+            <select id="subtipo" name="subtipo">
+                <option value="nodular">Nodular</option>
+                <option value="acral">Acral</option>
+                <option value="ssm">SSM</option>
+                <option value="lmm">LMM</option>
+                <option value="otros">Otros</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="breslow">Breslow (mm)</label>
+            <input type="number" step="0.01" id="breslow" name="breslow" required>
+        </div>
+        <div class="form-group">
+            <label for="ulceracion">Ulceración</label>
+            <select id="ulceracion" name="ulceracion">
+                <option value="1">Sí</option>
+                <option value="0" selected>No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="mitosis">Mitosis (por mm²)</label>
+            <input type="number" id="mitosis" name="mitosis" required>
+        </div>
+        <div class="form-group">
+            <label for="invasion_lv">Invasión LV</label>
+            <select id="invasion_lv" name="invasion_lv">
+                <option value="1">Sí</option>
+                <option value="0" selected>No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="invasion_perineural">Invasión Perineural</label>
+            <select id="invasion_perineural" name="invasion_perineural">
+                <option value="1">Sí</option>
+                <option value="0" selected>No</option>
+            </select>
+        </div>
+        <button type="submit">Calcular</button>
+    </form>
+    <div id="resultado">
+        <h2>La probabilidad es: <span id="valor-probabilidad">...</span></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
